@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Project | All In One Freelancer</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body::before {
+        content: "";
+        background-image: url('4127298.jpg'); /* Ganti sesuai file kamu */
+        background-size: cover;
+        background-position: center;
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.3;
+      }
+    </style>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out both;
+      }
+    </style>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="text-xl font-bold">AR Project</a>
+
+        <!-- Hamburger (Mobile) -->
+        <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Nav Links -->
+        <div id="nav-links" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-4 mt-4 md:mt-0">
+          <a href="#layanan" class="block px-3 py-2 hover:text-red-400">Layanan</a>
+          <a href="#portofolio" class="block px-3 py-2 hover:text-red-400">Portofolio</a>
+          <a href="#testimoni" class="block px-3 py-2 hover:text-red-400">Testimoni</a>
+          <a href="#faq" class="block px-3 py-2 hover:text-red-400">FAQ</a>
+          <a href="#about" class="block px-3 py-2 hover:text-red-400">Tentang</a>
+          <a href="https://wa.me/6281324715032"
+            class="mt-2 md:mt-0 ml-0 md:ml-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded">Hubungi</a>
+        </div>
+      </div>
+    </nav>
+    <div class="relative overflow-hidden">
+      <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 z-10 relative pt-32" id="hero">
+        <img src="AR Project.png" alt="Logo AR Project" class="h-36 mb-4 animate-fade-in-up" />
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">AR PROJECT</h1>
+        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mb-8 animate-fade-in-up">
+          Membangun sistem kerja otomatis, brand adaptif, dan solusi AI praktis.<br>
+          Dirancang bukan hanya untuk hari ini — tapi untuk masa depan.
+        </p>
+        <div class="flex gap-4 animate-fade-in-up">
+          <a href="https://wa.me/6281324715032" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded text-white">Jadwalkan Konsultasi</a>
+          <a href="#layanan" class="border border-gray-300 px-6 py-3 rounded text-gray-300 hover:text-white">Pelajari Selengkapnya</a>
+        </div>
+      </section>
+
+
+        <!-- Section Problem → Solusi -->
+        <section class="py-20 px-6 z-10 relative text-center" id="problem">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Kenapa Banyak yang Gagal Fokus?</h2>
+          <p class="text-gray-300 max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+            Di era serba digital, bukan kurang alat yang jadi masalah — tapi terlalu banyak pilihan, tanpa arah yang jelas.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto text-left">
+            <!-- Problem -->
+            <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6" data-aos="zoom-in" data-aos-delay="200">
+              <h3 class="text-2xl font-semibold mb-4 text-red-500">Masalah Umum</h3>
+              <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>Tools berantakan, gak sinkron antar platform</li>
+                <li>Brand terlihat asal-asalan, gak mencerminkan value</li>
+                <li>Konten gak konsisten dan sulit menjangkau audiens</li>
+                <li>Data dan dokumen penting tercecer, gak efisien</li>
+                <li>Produk digital ada ide, tapi gak tahu harus mulai dari mana</li>
+              </ul>
+            </div>
+
+            <!-- Solusi -->
+            <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6" data-aos="zoom-in" data-aos-delay="300">
+              <h3 class="text-2xl font-semibold mb-4 text-green-400">Solusi dari AR Project</h3>
+              <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>Sistem kerja digital yang dirancang biar otomatis & efisien</li>
+                <li>Branding & desain visual yang selaras dengan visi kamu</li>
+                <li>Konten terstruktur, sesuai funnel dan gaya komunikasimu</li>
+                <li>Dokumen, proposal, dan laporan profesional & rapi</li>
+                <li>Bantuan teknis untuk membangun dan menjual produk digitalmu</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      <!-- Separator Halus -->
+      <div class="h-16 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+
+      <!-- Section Keunggulan Kami -->
+      <section class="py-20 px-6 z-10 relative text-center" id="keunggulan">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Keunggulan AR Project</h2>
+        <p class="text-gray-300 max-w-xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+          Kami bukan sekadar vendor, tapi partner yang bantu kamu berpikir sistematis & bertindak efisien.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+          <!-- Card 1 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6" data-aos="zoom-in-up" data-aos-delay="0">
+            <div class="text-red-500 text-3xl mb-3">🧭</div>
+            <h3 class="text-lg font-semibold mb-2">Pendekatan Strategis</h3>
+            <p class="text-gray-300 text-sm">Semua output kami dirancang dengan logika yang solid & tujuan jangka panjang, bukan sekadar keren di tampilan.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6" data-aos="zoom-in-up" data-aos-delay="100">
+            <div class="text-red-500 text-3xl mb-3">⚙️</div>
+            <h3 class="text-lg font-semibold mb-2">Efisiensi Sistem Kerja</h3>
+            <p class="text-gray-300 text-sm">Integrasi tools, otomatisasi, dan template kerja bantu kamu hemat waktu & tenaga tiap hari.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6" data-aos="zoom-in-up" data-aos-delay="200">
+            <div class="text-red-500 text-3xl mb-3">🎯</div>
+            <h3 class="text-lg font-semibold mb-2">Hasil yang Terarah</h3>
+            <p class="text-gray-300 text-sm">Baik jasa maupun produk digital kami dirancang untuk mendekatkan kamu ke target yang jelas.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6" data-aos="zoom-in-up" data-aos-delay="300">
+            <div class="text-red-500 text-3xl mb-3">🛠️</div>
+            <h3 class="text-lg font-semibold mb-2">Fleksibel & Solutif</h3>
+            <p class="text-gray-300 text-sm">Setiap klien unik. Kami siap menyesuaikan layanan dan membangun sistem yang benar-benar kamu butuhkan.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6" data-aos="zoom-in-up" data-aos-delay="400">
+            <div class="text-red-500 text-3xl mb-3">📈</div>
+            <h3 class="text-lg font-semibold mb-2">Bisa Dipantau & Diukur</h3>
+            <p class="text-gray-300 text-sm">Kami pastikan output bisa kamu ukur, evaluasi, dan tingkatkan secara berkelanjutan.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6" data-aos="zoom-in-up" data-aos-delay="500">
+            <div class="text-red-500 text-3xl mb-3">🤝</div>
+            <h3 class="text-lg font-semibold mb-2">Berpihak pada Klien</h3>
+            <p class="text-gray-300 text-sm">Kami berdiri di sisi kamu — bukan sekadar menjual, tapi benar-benar peduli dapur kamu tetap nyala.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Separator Halus -->
+      <div class="h-16 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+
+      <!-- Section Layanan Kami -->
+      <section class="py-20 px-6 z-10 relative text-center" id="layanan">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Layanan Kami</h2>
+        <p class="text-gray-300 max-w-xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+          AR Project hadir untuk menyederhanakan proses kerja, meningkatkan kepercayaan brand, dan membawa solusi efisien berbasis digital.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <!-- Layanan 1 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:scale-105 transition"
+               data-aos="flip-left" data-aos-delay="0">
+            <div class="text-red-500 text-4xl mb-4">📊</div>
+            <h3 class="text-xl font-semibold mb-2">Data Analyst & Documentation</h3>
+            <p class="text-gray-300 text-sm">Mulai dari analisis statistik, audit dokumen, hingga penyusunan proposal dan laporan profesional.</p>
+          </div>
+
+          <!-- Layanan 2 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:scale-105 transition"
+               data-aos="flip-left" data-aos-delay="100">
+            <div class="text-red-500 text-4xl mb-4">🎨</div>
+            <h3 class="text-xl font-semibold mb-2">Design and Branding</h3>
+            <p class="text-gray-300 text-sm">Desain logo, identitas visual, dan materi promosi yang strategis dan terarah sesuai karakter bisnis.</p>
+          </div>
+
+          <!-- Layanan 3 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:scale-105 transition"
+               data-aos="flip-left" data-aos-delay="200">
+            <div class="text-red-500 text-4xl mb-4">📣</div>
+            <h3 class="text-xl font-semibold mb-2">Promotion & Marketing</h3>
+            <p class="text-gray-300 text-sm">Strategi konten, iklan digital, dan copywriting yang menjangkau audiens secara tepat sasaran.</p>
+          </div>
+
+          <!-- Layanan 4 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:scale-105 transition"
+               data-aos="flip-left" data-aos-delay="300">
+            <div class="text-red-500 text-4xl mb-4">🧩</div>
+            <h3 class="text-xl font-semibold mb-2">Digital Product & Website</h3>
+            <p class="text-gray-300 text-sm">Website landing page, eBook, prompt builder, dan produk digital siap jual dalam satu paket.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Separator Halus -->
+      <div class="h-16 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+
+      <!-- Section Tools & Tech Stack -->
+      <section class="py-20 px-6 z-10 relative text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Tools & Tech Stack</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+          Kami menggabungkan berbagai tools lintas bidang untuk menciptakan solusi otomatis, desain yang efisien, dan eksekusi proyek yang profesional.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto text-left">
+
+          <!-- 1: Google Workspace -->
+          <div data-aos="zoom-in" data-aos-delay="0">
+            <h3 class="text-xl font-semibold mb-2">📁 Google Workspace</h3>
+            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+              <li>Docs, Sheets, Slides, Forms</li>
+              <li>Drive, Calendar</li>
+              <li>App Script</li>
+            </ul>
+          </div>
+
+          <!-- 2: AI Tools -->
+          <div data-aos="zoom-in" data-aos-delay="100">
+            <h3 class="text-xl font-semibold mb-2">🤖 AI Tools</h3>
+            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+              <li>ChatGPT, Notion AI, Gemini, Claude</li>
+              <li>Midjourney, Leonardo AI, Kling AI,</li>
+              <li>Google Veo3, DALL·E, Sora , etc</li>
+            </ul>
+          </div>
+
+          <!-- 3: API & Automasi -->
+          <div data-aos="zoom-in" data-aos-delay="200">
+            <h3 class="text-xl font-semibold mb-2">🔗 API & Automasi AI</h3>
+            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+              <li>AI API</li>
+              <li>n8n, Make.com, Zapier</li>
+              <li>Python, Next Js</li>
+            </ul>
+          </div>
+
+          <!-- 4: Coding & Web Dev -->
+          <div data-aos="zoom-in" data-aos-delay="300">
+            <h3 class="text-xl font-semibold mb-2">💻 Coding & Web Dev</h3>
+            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+              <li>Python</li>
+              <li>HTML, CSS, JS</li>
+              <li>Jupyter, Replit, Streamlit</li>
+            </ul>
+          </div>
+
+          <!-- 5: Git & Deployment -->
+          <div data-aos="zoom-in" data-aos-delay="400">
+            <h3 class="text-xl font-semibold mb-2">🗂️ Git & Deployment</h3>
+            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+              <li>Git & GitHub</li>
+              <li>Vercel</li>
+              <li>Netlify, etc</li>
+            </ul>
+          </div>
+
+          <!-- 6: Desain & Branding -->
+          <div data-aos="zoom-in" data-aos-delay="500">
+            <h3 class="text-xl font-semibold mb-2">🎨 Desain & Branding</h3>
+            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+              <li>Canva Pro, CorelDraw</li>
+              <li>Photoshop, Illustrator</li>
+              <li>Figma (UI/UX)</li>
+            </ul>
+          </div>
+
+          <!-- 7: Data & Statistik -->
+          <div data-aos="zoom-in" data-aos-delay="600">
+            <h3 class="text-xl font-semibold mb-2">📊 Data & Statistik</h3>
+            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+              <li>Excel VBA, Python Pandas</li>
+              <li>SPSS, SmartPLS</li>
+              <li>NVivo, ExpertChoice</li>
+            </ul>
+          </div>
+
+          <!-- 8: Project & Kolaborasi -->
+          <div data-aos="zoom-in" data-aos-delay="700">
+            <h3 class="text-xl font-semibold mb-2">🧩 Project & Kolaborasi</h3>
+            <ul class="text-gray-300 text-sm list-disc list-inside space-y-1">
+              <li>Notion, Trello, Google Keep</li>
+              <li>Slack, Telegram</li>
+              <li>Loom, Google Meet</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- Separator Halus -->
+      <div class="h-16 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+
+      <!-- Section Portofolio -->
+      <section class="py-20 px-6 z-10 relative text-center" id="portofolio">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">Portofolio Terbaru</h2>
+        <p class="text-gray-300 max-w-xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+          Beberapa hasil kerja nyata dari AR Project dalam berbagai bidang digital & otomasi.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+          <!-- Produk Digital -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow hover:scale-105 transition"
+               data-aos="zoom-in" data-aos-delay="0">
+            <img src="portfolio-ebook.png" alt="eBook Collection" class="w-full h-48 object-cover">
+            <div class="p-4 text-left">
+              <h3 class="text-lg font-semibold mb-1">AI Thesis Lab</h3>
+              <p class="text-sm text-gray-300">Produk Digital - eBook Edukatif</p>
+            </div>
+          </div>
+
+          <!-- Automation -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow hover:scale-105 transition"
+               data-aos="zoom-in" data-aos-delay="100">
+            <img src="portfolio-workflow.png" alt="Workflow n8n Telegram" class="w-full h-48 object-cover">
+            <div class="p-4 text-left">
+              <h3 class="text-lg font-semibold mb-1">Otomasi Telegram x n8n</h3>
+              <p class="text-sm text-gray-300">Workflow & Bot Sistem Stok</p>
+            </div>
+          </div>
+
+          <!-- Logo Design -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow hover:scale-105 transition"
+               data-aos="zoom-in" data-aos-delay="200">
+            <img src="portfolio-logo.png" alt="Desain Logo UMKM" class="w-full h-48 object-cover">
+            <div class="p-4 text-left">
+              <h3 class="text-lg font-semibold mb-1">Logo UMKM “Javasta”</h3>
+              <p class="text-sm text-gray-300">Branding - Desain Logo Minimalis</p>
+            </div>
+          </div>
+
+          <!-- Data Analyst -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow hover:scale-105 transition"
+               data-aos="zoom-in" data-aos-delay="300">
+            <img src="portfolio-analyst.png" alt="Dashboard Analisis Data" class="w-full h-48 object-cover">
+            <div class="p-4 text-left">
+              <h3 class="text-lg font-semibold mb-1">Dashboard SPSS & SmartPLS</h3>
+              <p class="text-sm text-gray-300">Data Analyst - Statistik & Visualisasi</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      
+      <!-- Separator Halus -->
+      <div class="h-16 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+
+
+      <section class="py-20 px-6 z-10 relative text-center" id="testimoni">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Apa Kata Klien Kami</h2>
+        <p class="text-gray-300 max-w-xl mx-auto mb-12">
+          Klien kami datang dari berbagai latar: mahasiswa, UMKM, hingga kreator digital. Kami pastikan setiap kebutuhan ditangani dengan tepat.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto text-left">
+          <!-- Testimoni 1 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6">
+            <p class="italic text-gray-300 mb-4">“AR Project bantu saya dari desain hingga strategi konten. Semua cepat, rapi, dan tepat sasaran.”</p>
+            <p class="font-semibold text-white">– Aulia, Kreator Edukasi</p>
+          </div>
+
+          <!-- Testimoni 2 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6">
+            <p class="italic text-gray-300 mb-4">“Awalnya minta logo, ternyata bisa sekalian sistem otomatis. Efisien banget untuk UMKM.”</p>
+            <p class="font-semibold text-white">– Andri, Pemilik Toko Offline</p>
+          </div>
+
+          <!-- Testimoni 3 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6">
+            <p class="italic text-gray-300 mb-4">“Proposal, SPSS, dan laporan semua dibantu. Nggak cuma cepat tapi juga rapi dan akademik.”</p>
+            <p class="font-semibold text-white">– Dian, Mahasiswa Pascasarjana</p>
+          </div>
+
+          <!-- Testimoni 4 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6">
+            <p class="italic text-gray-300 mb-4">“Saya nggak ngerti teknis, tapi AR Project bikin semuanya jadi mudah. Sistem jalan, brand jadi, hasil langsung kerasa.”</p>
+            <p class="font-semibold text-white">– Rina, Freelancer & Coach</p>
+          </div>
+        </div>
+
+      </section>
+      
+      <!-- Separator Halus -->
+      <div class="h-16 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+
+
+      <section class="py-20 px-6 z-10 relative text-center" id="faq">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Pertanyaan Umum (FAQ)</h2>
+        <p class="text-gray-300 max-w-xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+          Beberapa pertanyaan yang sering diajukan sebelum klien mulai kerja sama dengan kami.
+        </p>
+
+        <div class="space-y-6 max-w-4xl mx-auto text-left">
+
+          <!-- FAQ 1 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6"
+               data-aos="fade-up" data-aos-delay="0">
+            <h3 class="font-semibold text-white mb-2">Apakah bisa pesan satu layanan saja?</h3>
+            <p class="text-gray-300 text-sm">Tentu. Kami fleksibel, bisa mulai dari jasa kecil hingga paket lengkap.</p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6"
+               data-aos="fade-up" data-aos-delay="100">
+            <h3 class="font-semibold text-white mb-2">Bagaimana sistem pembayarannya?</h3>
+            <p class="text-gray-300 text-sm">Umumnya DP 50% dan pelunasan setelah revisi final. Bisa disesuaikan.</p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6"
+               data-aos="fade-up" data-aos-delay="200">
+            <h3 class="font-semibold text-white mb-2">Berapa kali revisi tersedia?</h3>
+            <p class="text-gray-300 text-sm">Tergantung jenis layanan, umumnya 1–2 kali revisi minor disertakan.</p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6"
+               data-aos="fade-up" data-aos-delay="300">
+            <h3 class="font-semibold text-white mb-2">Siapa yang mengerjakan proyek saya?</h3>
+            <p class="text-gray-300 text-sm">Kami bekerja sebagai tim kecil, dengan satu kontak utama yang akan koordinasi semua progress.</p>
+          </div>
+
+        </div>
+      </section>
+      
+      <!-- Separator Halus -->
+      <div class="h-16 bg-gradient-to-b from-transparent via-white/5 to-transparent"></div>
+
+      <section class="py-20 px-6 z-10 relative text-center" id="about">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Tentang AR Project</h2>
+
+        <div class="max-w-3xl mx-auto bg-white bg-opacity-5 backdrop-blur-md border border-white/10 rounded-xl p-6"
+             data-aos="fade-up" data-aos-delay="100">
+          <p class="text-gray-300 leading-relaxed mb-4">
+            <strong>AR Project</strong> adalah studio digital berbasis di Indonesia yang dipimpin oleh <strong>Aldo</strong> — seorang freelancer multidisiplin dengan pengalaman di bidang desain, data, dan sistem otomasi.
+          </p>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Kami hadir untuk membantu mahasiswa, bisnis, dan kreator membangun fondasi kerja yang sistematis, efisien, dan berorientasi hasil. Mulai dari ide, eksekusi, hingga monetisasi.
+          </p>
+          <p class="text-gray-300 leading-relaxed">
+            Komitmen kami: bantu kamu bertumbuh sambil dapur tetap nyala.
+          </p>
+        </div>
+
+        <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white">Siap Meningkatkan Bisnis dan Proyek Anda?</h3>
+          <p class="text-gray-300 mb-6">Kami siap membantu Anda merancang strategi yang terarah dan solusi yang dapat langsung diimplementasikan.</p>
+          <a href="https://wa.me/6281324715032" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded">
+            Konsultasi Sekarang
+          </a>
+        </div>
+
+
+        <footer class="text-center text-sm text-gray-500 py-6 mt-12" data-aos="fade-up" data-aos-delay="200">
+          © 2025 AR Project.<br>Powered by Aldo.rn.
+        </footer>
+
+      </section>
+
+
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // durasi animasi 800ms
+        once: true     // animasi hanya muncul sekali (tidak berulang scroll)
+      });
+    </script>
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('nav-links');
+
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
